@@ -1,0 +1,11 @@
+.pagination button{
+    margin-right:10px;
+    background-color: aliceblue;
+    border: 1px solid orange;
+    border-radius: 2px;
+}
+.pagination button:hover,.pagination .selected{
+    background-color: rgb(34, 38, 41);
+    border: 1px solid rgb(219, 45, 141);
+    color: bisque;  
+}

@@ -1,0 +1,13 @@
+.home-cover{
+    height:100vh;
+    background-image: url('../../images/cover.jpeg');
+}
+.search-input{
+   width: 50%;
+  
+  
+}
+.search-input-button{
+    height: 7%;
+   
+}
