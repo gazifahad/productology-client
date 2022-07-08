@@ -7,16 +7,28 @@ import auth from '../../firebase.init';
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { useEffect } from 'react';
+import Cart from '../Cart/Cart';
 
 const Home = ({choosenItems}) => {
- console.log(choosenItems);
-  
+  const [totalPrice,setTotalPrice]=useState(0);
+//  console.log(choosenItems);
+
   const [user] = useAuthState(auth);
+  let price=0;
+  for (let index = 0; index < choosenItems.length; index++) {
+     price+=parseFloat(choosenItems[index]?.price);
+    
+  }
+  // console.log(price)
+
+     
+ 
+
 
   
   return (
-    <div>
-      <section className='border border-2 w-100 home-cover text-center'>
+    <div className='w-100'>
+      <section className='border border-2 home-cover text-center'>
        <h2 className='text-secondary mt-5'>Welcome to productology</h2>
        <h4 className='text-secondary'>get your facourite items in one place</h4>
        <Form className="d-flex mx-auto text-box search-input">
@@ -53,10 +65,18 @@ const Home = ({choosenItems}) => {
          <h4>Name: </h4><p>{user?.displayName}</p>
          <p >Email: <small className='ms-2'>{user?.email}</small></p>
          <section>
-         <h4>Choosen Items:</h4>
+         <h4>Choosen Items:{choosenItems.length}</h4>
          <ol>
-          <li></li>
-         </ol>
+          {
+            choosenItems.map(item=><Cart item={item}></Cart>)
+          }
+         
+          </ol>
+          <hr />
+          <h4 className='mt-2'>total price:{price}</h4>
+          <NavLink className='btn btn-secondary border-0' to={'/checkout'}>Checkout</NavLink>
+         
+         
          </section>
          </section>
         </section>

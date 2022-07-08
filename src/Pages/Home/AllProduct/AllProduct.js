@@ -5,12 +5,17 @@ const AllProduct = ({setChoosenItems,choosenItems}) => {
     const [cartItems,setCartItems]=useState([]);
     const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
+  const [pageSize, setPageSize] = useState(9);
     const [products, setProducts] = useState([]);
-    const cartItem=products.find(product=>product._id===choosenItems);
-//    setCartItems(cartItem);
+    // const setItem=async()=>{
+    //     const cartItem= await products.find(product=>product._id===choosenItems);
+    //     setCartItems(cartItem);
+    // }
+    // setItem();
+    // console.log(cartItems);
+   
 //    setCartItems(newCartItems);
-//    console.log(cartItems);
+   
    useEffect(()=>{
     const url=`http://localhost:5000/allProduct?page=${page}&size=${pageSize}`
     fetch(url)
@@ -25,11 +30,13 @@ const AllProduct = ({setChoosenItems,choosenItems}) => {
         .then(res => res.json())
         .then(data => {
             const count = data.count;
-            const pages = Math.ceil(count / 10)
+            const pages = Math.ceil(count / 9)
             setPageCount(pages);
         })
 }, [])
+          
 // console.log(page,pageSize);
+// console.log(choosenItems);
 
     return (
         <div >
@@ -38,7 +45,7 @@ const AllProduct = ({setChoosenItems,choosenItems}) => {
             <div className="row">
         
             {
-                products.map(product => <Product setChoosenItems={setChoosenItems} key={product._id} product={product}></Product>)
+                products.map(product => <Product choosenItems={choosenItems} setChoosenItems={setChoosenItems} key={product._id} product={product}></Product>)
             }
           
           </div>
