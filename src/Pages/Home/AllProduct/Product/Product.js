@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
+
 import { AnimationWrapper } from 'react-hover-animation';
 
-const Product = ({product,setChoosenItems,choosenItems}) => {
+const Product = ({product,choosenItems,setChoosenItems}) => {
  
     const { _id,name, img ,seller,ratings,price}=product;
     const addToCart=async(product)=>{
+      // console.log(choosenItems);
       
       //  console.log(id);
 
+    
       await setChoosenItems([...choosenItems,product]);
-      // console.log(choosenItems);
+      
+      
       // const priceN=parseInt(product.price);
       //  setTotalPrice(parseInt(product.price)+totalPrice);
       

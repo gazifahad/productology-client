@@ -4,6 +4,13 @@
     background-size: cover;
     width: 100%;
     padding-top: 50%;
+    height: 100vh;
+    position: relative;
+}
+.home-up-content{
+position: absolute;
+top:0;
+width: 100%;
 }
 .search-input{
    width: 50%;

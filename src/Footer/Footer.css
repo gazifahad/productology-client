@@ -1,0 +1,12 @@
+.footer{
+    background-color: black;
+    
+}
+ul li{
+    list-style: none;
+    text-align: left;
+    margin: 5px;
+}
+.downside span{
+margin: 20px;
+}

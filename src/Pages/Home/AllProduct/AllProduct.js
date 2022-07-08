@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import Product from './Product/Product';
 import './AllProduct.css'
-const AllProduct = ({setChoosenItems,choosenItems}) => {
+const AllProduct = ({choosenItems,setChoosenItems}) => {
+    // console.log(choosenItems);
     const [cartItems,setCartItems]=useState([]);
     const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(1);

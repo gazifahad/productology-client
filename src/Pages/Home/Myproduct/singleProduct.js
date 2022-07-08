@@ -13,7 +13,7 @@ const SingleProduct = ({product,myProducts,setMyProducts}) => {
         })
         .then(res=>res.jsn)
         .then(data=>console.log(data))
-        const rest=myProducts?.filter(product=>product._id===id);
+        const rest=myProducts.filter(product=>product._id===id);
         setMyProducts(rest);
 
       }
@@ -23,8 +23,6 @@ const SingleProduct = ({product,myProducts,setMyProducts}) => {
     }
     return (
         <div className="col col-sm-12 col-md-6 col-lg-4 mt-5">
-             
-             
         
         <Card className='mb-2 rounded text-white bg-secondary'>
         <AnimationWrapper>

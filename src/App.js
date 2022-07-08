@@ -1,6 +1,7 @@
-import { Route, Routes } from 'react-router';
+
 import {useState} from 'react'
-import './App.css';
+import { Route, Routes } from 'react-router';
+
 import AllProduct from './Pages/Home/AllProduct/AllProduct';
 import Home from './Pages/Home/Home';
 import MyProduct from './Pages/Home/Myproduct/MyProduct';
@@ -11,16 +12,16 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 
 function App() {
   const[choosenItems,setChoosenItems]=useState([]);
+
   // console.log(choosenItems);
-  
   return (
     <div className="App">
       <Header></Header>
       <Routes>
       <Route path='/' element={<Home choosenItems={choosenItems}></Home>}>
-            <Route index element={<AllProduct></AllProduct>}></Route>
+            <Route index element={<AllProduct choosenItems={choosenItems} setChoosenItems={setChoosenItems}></AllProduct>}></Route>
             <Route path="myProduct" element={<MyProduct></MyProduct>}/>
-            <Route path="allProduct" element={<AllProduct setChoosenItems={setChoosenItems} choosenItems={choosenItems}></AllProduct>}/>
+            <Route path="allProduct" element={<AllProduct  ></AllProduct>}/>
           </Route>
         <Route path='login' element={<Login></Login>}/>
         <Route path='register' element={<Registration></Registration>}>

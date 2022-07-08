@@ -50,11 +50,11 @@ const MyProduct = () => {
     
    
     return (
-        <div className='container'>
+        <div className=''>
             <h2 className='text-center'>My products</h2>
             <section className="row">
             {
-             myProducts.map(product=><SingleProduct key={product._id} product={product} MyProducts={myProducts} setMyProducts={setMyProducts}> </SingleProduct>)   
+             myProducts.map(product=><SingleProduct key={product._id} product={product} MyProducts={myProducts} setMyProducts={setMyProducts  }> </SingleProduct>)   
             }
             </section>
             <div className='text-center'>
