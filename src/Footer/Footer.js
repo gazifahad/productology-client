@@ -71,88 +71,76 @@ const Footer = () => {
 
         <section className=''>
           <MDBRow>
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 footer-links'>
               <h5 className='text-uppercase text-start'>Links</h5>
 
               <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 1
+                   Blogs
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 2
+                    History
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 3
+                    Donate
                   </a>
                 </li>
-                <li>
-                  <a href='#!' className='text-white'>
-                    Link 4
-                  </a>
-                </li>
+                
               </ul>
             </MDBCol>
 
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-              <h5 className='text-uppercase text-start'>Links</h5>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 footer-links'>
+              <h5 className='text-uppercase text-start '>Links</h5>
 
               <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 1
+                    Career
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 2
+                    Crews
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 3
+                    Feed
                   </a>
                 </li>
-                <li>
-                  <a href='#!' className='text-white'>
-                    Link 4
-                  </a>
-                </li>
+                
               </ul>
             </MDBCol>
 
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-              <h5 className='text-uppercase text-start'>Links</h5>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 footer-links'>
+              <h5 className='text-uppercase text-start footer-links'>Links</h5>
 
               <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 1
+                   productology 
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 2
+                   e-commerce
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 3
+                   F-commerce
                   </a>
                 </li>
-                <li>
-                  <a href='#!' className='text-white'>
-                    Link 4
-                  </a>
-                </li>
+               
               </ul>
             </MDBCol>
 
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 footer-links'>
               <h5 className='text-uppercase text-start'>Links</h5>
 
               <ul className='list-unstyled mb-0'>
@@ -171,11 +159,7 @@ const Footer = () => {
                     Link 3
                   </a>
                 </li>
-                <li>
-                  <a href='#!' className='text-white'>
-                    Link 4
-                  </a>
-                </li>
+                
               </ul>
             </MDBCol>
           </MDBRow>
@@ -183,10 +167,10 @@ const Footer = () => {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2020 Copyright:
-        <a className='text-white' href='https://mdbootstrap.com/'>
+        © 2020 Copyright: 
+        <b className='text-white ms-1'>
           Productology
-        </a>
+        </b>
       </div>
     </MDBFooter>
     );

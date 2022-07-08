@@ -42,7 +42,7 @@ const AllProduct = ({choosenItems,setChoosenItems}) => {
     return (
         <div >
              <div className="container">
-            <h2 className='text-center'>All prdoucts {products.length}</h2>
+            <h4 className='text-center mt-2 text-secondary'>{products.length} products available in this page</h4>
             <div className="row">
         
             {

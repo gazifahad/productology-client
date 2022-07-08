@@ -21,7 +21,7 @@ function App() {
       <Route path='/' element={<Home choosenItems={choosenItems}></Home>}>
             <Route index element={<AllProduct choosenItems={choosenItems} setChoosenItems={setChoosenItems}></AllProduct>}></Route>
             <Route path="myProduct" element={<MyProduct></MyProduct>}/>
-            <Route path="allProduct" element={<AllProduct  ></AllProduct>}/>
+            <Route path="allProduct" element={<AllProduct  choosenItems={choosenItems} setChoosenItems={setChoosenItems}></AllProduct>}/>
           </Route>
         <Route path='login' element={<Login></Login>}/>
         <Route path='register' element={<Registration></Registration>}>

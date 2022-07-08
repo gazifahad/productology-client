@@ -44,7 +44,8 @@ const Product = ({product,choosenItems,setChoosenItems}) => {
               <Card.Text>
                Price: {price}
               </Card.Text>
-              <button onClick={()=>addToCart(product)} className='btn btn-light font-weight-bold text-secondary'>Add to cart</button>
+              <button onClick={()=>addToCart(product)} className='btn btn-light font-weight-bold text-secondary'>Add to cart  <i className="fa-solid fa-cart-arrow-down"></i> </button>
+              
             </Card.Body>
             </AnimationWrapper>
           </Card>

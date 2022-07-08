@@ -10,3 +10,6 @@ ul li{
 .downside span{
 margin: 20px;
 }
+.footer-links a{
+    text-decoration: none;
+}

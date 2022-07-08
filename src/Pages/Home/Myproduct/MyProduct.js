@@ -68,7 +68,7 @@ const MyProduct = () => {
                             aria-labelledby="example-modal-sizes-title-lg"
                         >
                             <Modal.Header closeButton>
-                                <Modal.Title id="example-modal-sizes-title-lg">
+                                <Modal.Title id="example-modal-sizes-title-lg" className='bg-secondary text-secondary'>
                                     Add a Product
                                 </Modal.Title>
                             </Modal.Header>

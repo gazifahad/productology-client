@@ -7,6 +7,12 @@
     height: 100vh;
     position: relative;
 }
+.home-menu-cart{
+margin-top: 13%;
+overflow-x: scroll;
+background-color: rgb(249, 245, 240);
+border-radius: 2%;
+}
 .home-up-content{
 position: absolute;
 top:0;
@@ -20,4 +26,7 @@ width: 100%;
 .search-input-button{
     height: 7%;
    
+}
+.home-product-section{
+    
 }
