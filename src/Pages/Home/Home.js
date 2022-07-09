@@ -11,6 +11,7 @@ import Cart from '../Cart/Cart';
 import Footer from '../../Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MDBIcon } from 'mdb-react-ui-kit';
+import Loading from '../Loading/Loading';
 
 const Home =({choosenItems}) => {
 
@@ -31,7 +32,7 @@ const Home =({choosenItems}) => {
   return (
     <div className='w-100'>
       <div className='home-cover'>
-      <section className='border border-2  text-center home-up-content'>
+      <section className='border-2  text-center home-up-content'>
        <h2 className='text-secondary mt-5'>Welcome to <span className='text-warning'>Productology</span></h2>
        <h6 className='text-secondary'>get your facourite items in one place</h6>
        <Form className="d-flex mx-auto text-box search-input">
@@ -46,31 +47,31 @@ const Home =({choosenItems}) => {
 
       </section>
       </div>
-      <section className='home-menu d-flex justify-content-between border border-2'>
+      <section className='home-menu d-flex justify-content-between border-2'>
         <section className='home-product-section d-flex flex-column align-items-center justify-content-center mx-auto mt-5'>
           <div className='bg-secondary'>
             <section className='home-menu-menus '>
             <NavLink className='btn btn-secondary border-0  ' to={'allProduct'}>All products</NavLink>
-            {
-              user &&
-              <NavLink className='btn btn-secondary border-0' to={'myProduct'}>My products</NavLink>
+           
+              <NavLink className='btn btn-secondary  border-left border-top-0 border-end-0 border-bottom-0 border-warning' to={'myProduct'}>My products</NavLink>
 
-            }
+           
           </section>
           </div>
           <div>
+           
             <Outlet></Outlet>
           </div>
         </section>
 
         <section className='home-menu-cart border border-1  w-25'>
          
-         <section className='cart-text ms-2  p-5 '>
+         <section className='cart-text ms-1  p-2 '>
          <h2 className='text-center'>Cart <i className="fa-solid fa-cart-arrow-down"></i> </h2>
-         <h4 className='mt-4'>Name: </h4><p>{user?.displayName}</p>
-         <p >Email: <small className='ms-2'>{user?.email}</small></p>
+         <h4 className='mt-4'>Name: {user?.displayName ? user?.displayName : 'mr. X'}</h4>
+         <b>email: </b><small className='ms-1'>{user?.email}</small>
          <section >
-         <h4>Choosen Items:{choosenItems.length}</h4>
+         <b className='me-1'>Choosen Items: </b>{choosenItems.length}
          <ol>
           {
             choosenItems.map(item=><Cart key={item._id} item={item}></Cart>)

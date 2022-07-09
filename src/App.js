@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login';
 import Registration from './Pages/Login/Registration';
 import Header from './Pages/Shared/Header';
 import CheckOut from './Pages/CheckOut/CheckOut';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 function App() {
   const[choosenItems,setChoosenItems]=useState([]);
@@ -27,7 +28,7 @@ function App() {
         <Route path='register' element={<Registration></Registration>}>
 
         </Route>
-        <Route path='/checkout' element={<CheckOut></CheckOut>}>
+        <Route path='/checkout' element={<RequireAuth><CheckOut></CheckOut></RequireAuth>}>
 
         </Route>
       </Routes>

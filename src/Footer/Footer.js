@@ -51,7 +51,7 @@ const Footer = () => {
               </div>
 
               <MDBCol md='5' start='12'>
-                <MDBInput contrast type='email' label='Our Motto' className='mb-4' />
+                <MDBInput contrast type='email' label='Email Adress' className='mb-3' />
               </MDBCol>
 
               <div className='col-auto'>
@@ -146,17 +146,17 @@ const Footer = () => {
               <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 1
+                    Work with us!
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 2
+                    life at productology
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                    Link 3
+                    future scopes
                   </a>
                 </li>
                 

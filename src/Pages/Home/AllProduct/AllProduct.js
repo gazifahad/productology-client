@@ -53,10 +53,10 @@ const AllProduct = ({choosenItems,setChoosenItems}) => {
           </div>
            
             {/* pagination */}
-            <section className='pagination d-flex justify-content-center mt-3' >
+            <section className='border border-1 w-100 pagination d-flex justify-content-center mt-3' >
                 {
                     [...Array(pageCount).keys()].map(number => <button
-                        className={page === number + 1 ? 'selected page-item' : 'page-item text-center'} onClick={() => setPage(number + 1)} key={number}>{number + 1} </button>)
+                        className={page === number + 1 ? 'selected page-item w-7' : 'page-item text-center w-7'} onClick={() => setPage(number + 1)} key={number}>{number + 1} </button>)
                 }
                 <b>page size: </b>
                 <select onChange={(e) => setPageSize(e.target.value)} name='' id=''>

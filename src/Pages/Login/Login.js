@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
     const [errorMsg,setErrorMsg]=useState('');
@@ -49,6 +50,7 @@ const Login = () => {
   
 </form>
 {loading}
+<SocialLogin></SocialLogin>
 
 
     </div>

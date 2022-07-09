@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SingleProduct from './singleProduct';
+import { reload } from 'firebase/auth';
 
 const MyProduct = () => {
     const [user]=useAuthState(auth);
@@ -13,7 +14,11 @@ const MyProduct = () => {
     const { register, handleSubmit } = useForm(); 
     const onSubmit = data => {
         // console.log(data);
-        setInputValues(data);
+        if(!user){
+            alert('please login to add a product')
+        }
+        else{
+            setInputValues(data);
        
 
 
@@ -29,6 +34,9 @@ const MyProduct = () => {
             })
             .then(res => res.json())
             .then(data => console.log(data))
+
+            window.location.reload();
+        }
            
 
     }
@@ -59,7 +67,7 @@ const MyProduct = () => {
             </section>
             <div className='text-center'>
 
-                        <Button className=' mx-auto' onClick={() => setLgShow(true)}>Add  new Product</Button>
+                        <Button className=' mx-auto text-black' onClick={() => setLgShow(true)}>Add new Product</Button>
 
                         <Modal
                             size="lg"
@@ -68,15 +76,19 @@ const MyProduct = () => {
                             aria-labelledby="example-modal-sizes-title-lg"
                         >
                             <Modal.Header closeButton>
-                                <Modal.Title id="example-modal-sizes-title-lg" className='bg-secondary text-secondary'>
+                                <Modal.Title id="example-modal-sizes-title-lg" className=''>
                                     Add a Product
                                 </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
                                 <form onSubmit={handleSubmit(onSubmit)} >
                                     
-                                    <input placeholder='Email' value={user?.email} {...register("email", { required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })} readOnly />
-                                    <input placeholder='product name' {...register("name", { required: true})} />
+                                {
+                                    user? <input className='text-danger' placeholder='Email' value={user?.email} {...register("email", { required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })} readOnly />: 
+                                <input placeholder='please login'  {...register("email", { required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}  />
+                                }
+                                    <input placeholder='product name' {...register("name", { required: true})} /> 
+                                   
                                     <input placeholder='seller brand' {...register("seller", { required: true})} />
                                     <input placeholder='Catagory' {...register("catagory", { required: true})} />
                                    

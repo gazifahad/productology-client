@@ -7,6 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import {signOut } from 'firebase/auth';
+import logo from '../../images/logo.png'
 
 
 const Header = () => {
@@ -19,6 +20,7 @@ const logout = () => {
           <Navbar variant="dark" bg="dark" expand="lg">
       <Container fluid>
         <nav className='d-flex align-items-center'>
+        <img style={{width:"25px", height:"25px"  }} src={logo} alt='logo'></img> 
         <Navbar.Brand className='' as={Link}  to={'/'}>productology</Navbar.Brand>
        <Navbar>
        <Link className='mx-1' to={'/'}> <button className='btn btn-secondary'>Home</button></Link>

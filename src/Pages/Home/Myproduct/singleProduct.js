@@ -13,8 +13,8 @@ const SingleProduct = ({product,myProducts,setMyProducts}) => {
         })
         .then(res=>res.jsn)
         .then(data=>console.log(data))
-        const rest=myProducts.filter(product=>product._id===id);
-        setMyProducts(rest);
+      
+        window.location.reload();
 
       }
       else{
