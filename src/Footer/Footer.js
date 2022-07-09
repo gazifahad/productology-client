@@ -32,9 +32,7 @@ const Footer = () => {
             <MDBIcon fab icon='instagram' />
           </a>
 
-          <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
-            <MDBIcon fab icon='linkedin-in' />
-          </a>
+        
 
           <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
             <MDBIcon fab icon='github' />
@@ -167,7 +165,7 @@ const Footer = () => {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2020 Copyright: 
+        © 2022 Copyright: 
         <b className='text-white ms-1'>
           Productology
         </b>

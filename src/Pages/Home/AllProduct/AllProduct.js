@@ -18,7 +18,7 @@ const AllProduct = ({choosenItems,setChoosenItems}) => {
 //    setCartItems(newCartItems);
    
    useEffect(()=>{
-    const url=`http://localhost:5000/allProduct?page=${page}&size=${pageSize}`
+    const url=`https://desolate-dusk-03409.herokuapp.com/allProduct?page=${page}&size=${pageSize}`
     fetch(url)
         .then(res => res.json())
         .then(data => setProducts(data));
@@ -27,7 +27,7 @@ const AllProduct = ({choosenItems,setChoosenItems}) => {
    },[page,pageSize])
    useEffect(() => {
            
-    fetch('http://localhost:5000/entityCount')
+    fetch('https://desolate-dusk-03409.herokuapp.com/entityCount')
         .then(res => res.json())
         .then(data => {
             const count = data.count;

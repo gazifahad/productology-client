@@ -47,10 +47,10 @@ const Home =({choosenItems}) => {
 
       </section>
       </div>
-      <section className='home-menu d-flex justify-content-between border-2'>
+      <section className='home-menu d-flex justify-content-between border-2 '>
         <section className='home-product-section d-flex flex-column align-items-center justify-content-center mx-auto mt-5'>
-          <div className='bg-secondary'>
-            <section className='home-menu-menus '>
+          <div className='bg-light d-flex justify-content-center align-items-center h-20 w-100 rounded'>
+            <section className='home-menu-menus bg-dark'>
             <NavLink className='btn btn-secondary border-0  ' to={'allProduct'}>All products</NavLink>
            
               <NavLink className='btn btn-secondary  border-left border-top-0 border-end-0 border-bottom-0 border-warning' to={'myProduct'}>My products</NavLink>

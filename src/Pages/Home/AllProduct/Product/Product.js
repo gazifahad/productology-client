@@ -30,7 +30,7 @@ const Product = ({product,choosenItems,setChoosenItems}) => {
              
              
         
-          <Card className='mb-2 rounded text-white bg-secondary'>
+          <Card className="card shadow p-3 mb-5 bg-body rounded" style={{ margin:"0 auto",  width: '18rem' }}>
           <AnimationWrapper>
             <Card.Img variant="top" src={img} />
             <Card.Body>

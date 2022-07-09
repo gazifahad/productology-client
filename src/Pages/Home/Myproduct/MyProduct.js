@@ -22,7 +22,7 @@ const MyProduct = () => {
        
 
 
-        const url = 'http://localhost:5000/add-product';
+        const url = 'https://desolate-dusk-03409.herokuapp.com/add-product';
         fetch(url,
             {
                 method: "POST",
@@ -43,7 +43,7 @@ const MyProduct = () => {
   useEffect(()=>{
     const getMyProducts=async ()=>{
         if (user.email){
-            const url=`http://localhost:5000/my-products?email=${user?.email}`
+            const url=`https://desolate-dusk-03409.herokuapp.com/my-products?email=${user?.email}`
             await fetch(url)
             .then(res=>res.json())
             .then(data=>setMyProducts(data))
